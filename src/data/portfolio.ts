@@ -6,6 +6,7 @@ export const profile = {
   name: "Utkarsh Tripathi",
   first: "Utkarsh",
   last: "Tripathi",
+  avatar: "/images/profile.png", // Place your picture at public/images/profile.jpg (or set to "" for monogram)
   location: "Bengaluru, Karnataka",
   email: "tripathiraj117@gmail.com",
   phone: "+91-7224976274",
@@ -37,44 +38,18 @@ export type Chapter = {
 
 export const journey: Chapter[] = [
   {
-    date: "2021",
-    title: "The Spark",
-    org: "Lakshmi Narain College of Technology",
-    place: "Bhopal",
-    story: "Started B.Tech in Artificial Intelligence & Machine Learning — mastering core algorithms, data structures, and statistical modeling.",
+    date: "Now",
+    title: "Production Backend & APIs",
+    org: "ADA Global · Django & FastAPI",
+    place: "In progress",
+    story: "Building high-performance backend services and REST APIs with Django and FastAPI alongside our Python ML stack.",
     details: [
-      "Built strong foundations in DSA, OOP, linear algebra, and core ML.",
-      "Earned Python, Java, and Web Development certifications from Coding Ninjas.",
+      "Designing and building backend services and REST APIs using Django and FastAPI.",
+      "Focusing on clean API contracts, ORM performance, logging and environment configuration.",
+      "Integrating LLMs and ML pipelines with web services for real-time inference.",
     ],
-    tags: ["Python", "Java", "DSA"],
-    accent: "#7c6cff",
-  },
-  {
-    date: "Feb 2023 — May 2023",
-    title: "Teaching Assistant Intern",
-    org: "Sunrise Mentors Pvt. Ltd.",
-    place: "Remote",
-    story: "Mentored aspiring developers in DSA, OOP, and logical problem solving.",
-    details: [
-      "Mentored students in Python, Java, Data Structures, Algorithms, and OOP.",
-      "Reviewed code, debugged complex logic, and guided interview preparation.",
-    ],
-    tags: ["Mentoring", "Python", "Java", "OOP"],
-    accent: "#22d3ee",
-  },
-  {
-    date: "Mar 2024 — May 2024",
-    title: "Data Analytics Intern",
-    org: "Unified Mentor",
-    place: "Remote",
-    story: "Engineered data cleaning, EDA, and PostgreSQL queries to extract business insights.",
-    details: [
-      "Built EDA and automated visualization pipelines using Python and SQL.",
-      "Designed analytical reporting dashboards for business intelligence trends.",
-      "Worked extensively with Pandas, NumPy, Matplotlib, and PostgreSQL datasets.",
-    ],
-    tags: ["SQL", "Pandas", "PostgreSQL", "EDA"],
-    accent: "#34d399",
+    tags: ["Django", "FastAPI", "REST APIs", "PostgreSQL"],
+    accent: "#a78bfa",
   },
   {
     date: "Dec 2025 — Present",
@@ -94,18 +69,45 @@ export const journey: Chapter[] = [
     accent: "#f472b6",
   },
   {
-    date: "Now",
-    title: "Production Backend & APIs",
-    org: "ADA Global · Django & FastAPI",
-    place: "In progress",
-    story: "Building high-performance backend services and REST APIs with Django and FastAPI alongside our Python ML stack.",
+    date: "Mar 2024 — May 2024",
+    title: "Data Analytics Intern",
+    org: "Unified Mentor",
+    place: "Remote",
+    story: "Engineered data cleaning, EDA, and PostgreSQL queries to extract business insights.",
     details: [
-      "Designing and building backend services and REST APIs using Django and FastAPI.",
-      "Focusing on clean API contracts, ORM performance, logging and environment configuration.",
-      "Integrating LLMs and ML pipelines with web services for real-time inference.",
+      "Built EDA and automated visualization pipelines using Python, SQL and PowerBI.",
+      "Designed analytical reporting dashboards for business intelligence trends.",
+      "Worked extensively with Pandas, NumPy, Matplotlib, and CSV files.",
     ],
-    tags: ["Django", "FastAPI", "REST APIs", "PostgreSQL"],
-    accent: "#a78bfa",
+    tags: ["SQL", "Pandas", "EDA"],
+    accent: "#34d399",
+  },
+  {
+    date: "Feb 2023 — May 2023",
+    title: "Teaching Assistant Intern",
+    org: "Sunrise Mentors Pvt. Ltd.",
+    place: "Remote",
+    story: "Mentored aspiring developers in DSA, OOP, and logical problem solving.",
+    details: [
+      "Mentored students in Python, Java, Data Structures, Algorithms, and OOP.",
+      "Reviewed code, debugged complex logic, and guided interview preparation.",
+      "Got 4.5+ rated by more than 600 students."
+    ],
+    tags: ["Mentoring", "Python", "Java", "OOP"],
+    accent: "#22d3ee",
+  },
+  {
+    date: "2021",
+    title: "The Spark",
+    org: "Lakshmi Narain College of Technology",
+    place: "Bhopal",
+    story: "Started B.Tech in Artificial Intelligence & Machine Learning — mastering core algorithms, data structures, and statistical modeling.",
+    details: [
+      "Built strong foundations in DSA, OOP, linear algebra, and core ML.",
+      "Earned Python, Java, and Web Development certifications from Coding Ninjas.",
+    ],
+    tags: ["Python", "Java", "DSA"],
+    accent: "#7c6cff",
   },
 ];
 
@@ -151,11 +153,11 @@ export const projects: Project[] = [
     accent2: "#6366f1",
     summary: "Building production-ready backend services and REST APIs using Django and FastAPI at ADA Global, powering AI applications and analytical dashboards.",
     highlights: [
-      "Designing REST APIs and backend services with Django and FastAPI.",
+      "Designing APIs and backend services with Django for AI applications and analytical dashboards.",
       "Optimised PostgreSQL queries and ORM pipelines for fast data delivery.",
       "Built for high reliability, security, and production deployment workflows.",
     ],
-    stack: ["Django", "FastAPI", "Python", "PostgreSQL", "Docker"],
+    stack: ["Django", "Python", "PostgreSQL", "Docker"],
     live: true,
   },
   {
@@ -166,7 +168,7 @@ export const projects: Project[] = [
     accent: "#7c6cff",
     accent2: "#22d3ee",
     image: "/images/projects/ml-pipeline.jpg",
-    summary: "A production-ready model that predicts voucher buyer conversion, powered by advanced feature engineering.",
+    summary: "A production-ready end-to-end machine learning pipeline that predicts voucher buyer conversion, powered by advanced feature engineering.",
     highlights: [
       "Advanced feature engineering on behavioural and transactional signals.",
       "MLflow experiment tracking, model versioning and reproducibility.",
@@ -221,6 +223,7 @@ export const projects: Project[] = [
       "Scalable REST backend with logging and env-based configuration.",
     ],
     stack: ["Python", "FastAPI", "WhatsApp Business API", "LLMs"],
+    link: { label: "GitHub Repository", href: "https://github.com/Tripathiraj1/whatsapp_integration" },
   },
   {
     id: "birdstrike",
@@ -236,6 +239,7 @@ export const projects: Project[] = [
       "Built predictive models to estimate bird-strike risk.",
     ],
     stack: ["Python", "Machine Learning", "Data Analytics"],
+    link: { label: "Github Repository", href: "https://github.com/Tripathiraj1/Bird-strike-damage-prediction"},
   },
 ];
 

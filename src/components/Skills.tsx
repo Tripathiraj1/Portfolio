@@ -17,13 +17,6 @@ export default function Skills() {
         </motion.h2>
       </div>
 
-      <div className="marquee" aria-hidden>
-        <div className="marquee-track">
-          {[...skills, ...skills].map((s, i) => (
-            <span key={i}>{s.name}<i>✦</i></span>
-          ))}
-        </div>
-      </div>
 
       <div className="skill-tabs" role="tablist" aria-label="Skill categories">
         {skillGroups.map((g) => (

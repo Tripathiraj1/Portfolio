@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import { AnimatePresence, motion, useMotionValue, useSpring, useTransform, type MotionValue } from "framer-motion";
 import { useEffect, useState } from "react";
 import { profile } from "@/data/portfolio";
+import { asset } from "@/lib/utils";
 import Magnetic from "./Magnetic";
 import { GithubIcon, LinkedinIcon, MailIcon } from "./Icons";
 
@@ -134,8 +136,21 @@ export default function Hero() {
           <div className="orb-ring orb-ring--2" />
           <div className="orb">
             <div className="orb-inner">
-              <span className="orb-mono">UT</span>
-              <span className="orb-sub mono">ml.engineer()</span>
+              {profile.avatar ? (
+                <Image
+                  src={asset(profile.avatar)}
+                  alt={profile.name}
+                  fill
+                  className="orb-avatar"
+                  sizes="350px"
+                  priority
+                />
+              ) : (
+                <>
+                  <span className="orb-mono">UT</span>
+                  <span className="orb-sub mono">ml.engineer()</span>
+                </>
+              )}
             </div>
           </div>
           {chips.map((c, i) => (

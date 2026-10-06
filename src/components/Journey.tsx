@@ -4,9 +4,10 @@ import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import { useRef, useState, type CSSProperties } from "react";
 import { journey, type Chapter } from "@/data/portfolio";
 
-function ChapterCard({ c, i }: { c: Chapter; i: number }) {
+function ChapterCard({ c, i, total }: { c: Chapter; i: number; total: number }) {
   const [open, setOpen] = useState(false);
   const side = i % 2 === 0 ? "left" : "right";
+  const chapterNum = String(total - i).padStart(2, "0");
 
   return (
     <div className={`chapter chapter--${side}`} style={{ "--accent": c.accent } as CSSProperties}>
@@ -25,7 +26,7 @@ function ChapterCard({ c, i }: { c: Chapter; i: number }) {
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="chapter-meta">
-          <span className="chapter-num mono">Chapter {String(i + 1).padStart(2, "0")}</span>
+          <span className="chapter-num mono">Chapter {chapterNum}</span>
           <span className="chapter-date mono">{c.date}</span>
         </div>
         <h3>{c.title}</h3>
@@ -74,7 +75,7 @@ export default function Journey() {
   return (
     <section id="journey" className="section journey">
       <div className="section-head center">
-        <span className="section-index mono">02 / Journey</span>
+        <span className="section-index mono">02 / Journey[ : : -1]</span>
         <motion.h2 className="section-title" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
           From first <span className="gradient-text">print()</span> to production.
         </motion.h2>
@@ -85,7 +86,7 @@ export default function Journey() {
         <div className="timeline-track" />
         <motion.div className="timeline-fill" style={{ scaleY }} />
         {journey.map((c, i) => (
-          <ChapterCard c={c} i={i} key={c.title} />
+          <ChapterCard c={c} i={i} total={journey.length} key={c.title} />
         ))}
       </div>
     </section>
