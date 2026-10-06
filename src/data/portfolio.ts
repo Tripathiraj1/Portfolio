@@ -38,20 +38,6 @@ export type Chapter = {
 
 export const journey: Chapter[] = [
   {
-    date: "Now",
-    title: "Production Backend & APIs",
-    org: "ADA Global · Django & FastAPI",
-    place: "In progress",
-    story: "Building high-performance backend services and REST APIs with Django and FastAPI alongside our Python ML stack.",
-    details: [
-      "Designing and building backend services and REST APIs using Django and FastAPI.",
-      "Focusing on clean API contracts, ORM performance, logging and environment configuration.",
-      "Integrating LLMs and ML pipelines with web services for real-time inference.",
-    ],
-    tags: ["Django", "FastAPI", "REST APIs", "PostgreSQL"],
-    accent: "#a78bfa",
-  },
-  {
     date: "Dec 2025 — Present",
     title: "Machine Learning Engineer",
     org: "ADA Global",
@@ -67,6 +53,20 @@ export const journey: Chapter[] = [
     ],
     tags: ["XGBoost", "MLflow", "FastAPI", "Django", "Docker"],
     accent: "#f472b6",
+  },
+  {
+    date: "Dec 2025 — Present",
+    title: "Production Backend & APIs",
+    org: "ADA Global",
+    place: "Bengaluru",
+    story: "Building high-performance backend services and REST APIs with Django and FastAPI alongside our Python ML stack.",
+    details: [
+      "Designing and building backend services and REST APIs using Django and FastAPI.",
+      "Focusing on clean API contracts, ORM performance, logging and environment configuration.",
+      "Integrating LLMs and ML pipelines with web services for real-time inference.",
+    ],
+    tags: ["Django", "FastAPI", "REST APIs", "PostgreSQL"],
+    accent: "#a78bfa",
   },
   {
     date: "Mar 2024 — May 2024",
